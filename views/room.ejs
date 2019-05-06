@@ -14,8 +14,8 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="/Dungeon">Dungeon</a></li>
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/dungeon">Dungeon</a></li>
             <li><a href="/monster">Monster</a></li>
             <li><a href="/feature">Feature</a></li>
         </ul>
@@ -29,13 +29,13 @@
     <div class="container-fluid text-center">    
     <div class="row content">
         <div class="col-sm-2 sidenav">
-            <p><a href="#">Map</a></p>
-            <p><a href="#">Text</a></p>
-            <p><a href="#">Hybrid</a></p>
+            <% for (var mi in roomData.menu) { %>
+                <p><a href="<%= mi %>"><%= roomData.menu[mi] %></a></p>
+            <% } %>
         </div>
         <div class="col-sm-8 text-left"> 
-        <h1>Build your dungeon</h1>
-        <p>Start here</p>
+        <h1>Create Room here</h1>
+        <p>Room visuals here</p>
         <hr>
         <h3>Finish Here</h3>
         <p>More Dungeon</p>
